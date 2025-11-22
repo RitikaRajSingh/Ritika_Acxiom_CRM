@@ -1,0 +1,122 @@
+﻿
+
+
+
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        /* 🔥 New stylish AI/ERP background image */
+        /* /* background-image: url("https://pngtree.com/free-backgrounds-photos/erp-system?pattern=vertical"); */ */
+         
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    /* Dark transparent overlay for premium look */
+    .overlay {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.55);
+        backdrop-filter: blur(3px);
+    }
+
+    /* Glassmorphism stylish box */
+    .card-box {
+        position: relative;
+        z-index: 2;
+        background: rgba(255, 255, 255, 0.15);
+        padding: 50px;
+        border-radius: 22px;
+        width: 450px;
+        text-align: center;
+        backdrop-filter: blur(12px);
+        border: 1px solid rgba(255,255,255,0.3);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+        color: #fff;
+        animation: fadeIn 1.3s ease-in-out;
+    }
+
+    /* Animation */
+    
+
+    {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    }
+
+    .btn-custom {
+        padding: 12px 25px;
+        width: 80%;
+        margin-top: 15px;
+        border-radius: 35px;
+        font-size: 18px;
+        font-weight: 600;
+        border: none;
+        transition: 0.3s;
+    }
+
+    /* Login button */
+    .btn-login {
+        background: #ffffff;
+        color: #2575fc;
+    }
+
+        .btn-login:hover {
+            background: #dce9ff;
+            transform: translateY(-2px);
+        }
+
+    /* Register button */
+    .btn-register {
+        background: #00e676;
+        color: #fff;
+    }
+
+        .btn-register:hover {
+            background: #00c853;
+            transform: translateY(-2px);
+        }
+</style>
+<body>
+
+<!-- Overlay -->
+<div class="overlay"></div>
+
+<!-- Main Card -->
+<div class="card-box">
+    <h2 class="mb-3">Welcome to Our ERP Portal</h2>
+    <p>Please choose an option to continue</p>
+
+    <a asp-controller="Authentication" asp-action="login">
+        <button class="btn-custom btn-login">Login</button>
+    </a>
+
+    <a asp-controller="Authentication" asp-action="register">
+        <button class="btn-custom btn-register">Register</button>
+    </a>
+</div>
+
+</body>
+
+
+
+ 

@@ -1,0 +1,96 @@
+﻿
+@model AcxiomRitika.Models.UserRegister
+
+<style>
+    body {
+        background: linear-gradient(135deg, #4158D0, #C850C0, #FFCC70);
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
+    .register-box {
+        width: 380px;
+        background: #ffffffee;
+        padding: 25px;
+        border-radius: 15px;
+        box-shadow: 0 0 20px rgba(0,0,0,0.2);
+        backdrop-filter: blur(5px);
+        animation: slide 0.5s ease;
+    }
+
+    @keyframes slide {
+        from
+
+    {
+        transform: translateY(-25px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    }
+
+    h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #333;
+        font-weight: bold;
+    }
+
+    label {
+        font-weight: 600;
+        margin-top: 10px;
+    }
+
+    .form-control {
+        margin-top: 5px;
+        border-radius: 10px;
+        padding: 10px;
+        border: 1px solid #bbb;
+    }
+
+    .btn-register {
+        width: 100%;
+        margin-top: 20px;
+        background: #6a11cb;
+        border: none;
+        padding: 10px;
+        font-size: 18px;
+        color: white;
+        border-radius: 10px;
+        font-weight: bold;
+        transition: 0.3s;
+    }
+
+        .btn-register:hover {
+            background: #2575fc;
+            transform: scale(1.03);
+        }
+</style>
+
+<div class="register-box">
+
+    <h2>User Registration</h2>
+
+    <form asp-action="Register" method="post">
+
+        <label>User Name</label>
+        <input type="text" name="Name" class="form-control" required />
+
+        <label>Email</label>
+        <input type="email" name="Email" class="form-control" required />
+
+        <label>Password</label>
+        <input type="password" name="Password" class="form-control" required />
+
+        <button type="submit" class="btn-register">Register</button>
+    </form>
+</div>

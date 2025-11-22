@@ -1,0 +1,26 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model AcxiomRitika.Models.Employee
+
+<h2>Add Employee</h2>
+
+<form asp-action="Create" method="post">
+
+    <label>Name</label>
+    <input type="text" asp-for="EmpName" class="form-control" required />
+
+    <label>Designation</label>
+    <input type="text" asp-for="Designation" class="form-control" required />
+
+    <label>Email</label>
+    <input type="email" asp-for="Email" class="form-control" required />
+
+    <label>Salary</label>
+    <input type="number" asp-for="Salary" class="form-control" required />
+
+    <br />
+    <button type="submit" class="btn btn-success">Save</button>
+</form>
